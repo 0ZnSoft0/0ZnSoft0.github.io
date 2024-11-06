@@ -1,0 +1,55 @@
+<!--
+* @Author: ZnSoft〔100-1=0〕
+* @Date: 2022/5/21 21:21
+* @Version: 1.0
+* @Description: ERROR
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="css/style.css" media="all">
+  <link rel="icon" href="icon/favicon.ico" type ="image/x-icon">
+  <title>ZnSoft[HomePage]</title>
+</head>
+
+<body>
+<h1>ZnSoft</h1>
+<div id="content">
+  <p>> <span>@AUTHOR</span>: "<i>ZnSoft〔100-1=0〕</i>"</p>
+  <p>> <span>SUCCESS CODE</span>: "<i>HTTP OK</i>"</p>
+  <p>> <span>SUCCESS DESCRIPTION</span>: "<i>ZnSoft HomePage</i>"</p>
+  <p>> <span>SUCCESS SUB CODE</span>: "<i>HTTP SUCCESS</i>"</p>
+  <p>> <span>SUCCESS MSG</span>: "<i>REQUEST SUCCESS THANK YOU FOR VISITING HERE IS ZnSoft's HOMEPAGE</i>"</p>
+  <p>> <span>SUCCESS DATA</span>: [<b>I know I'm blackened with my wings, and I know that there's no way back,
+      that I can't fool myself, that I hate those subtle sensitivities, that I keep saying I don't care,
+      I don't care about the past, I don't care about the future, that death is just a moment,
+      that the future never exists</b>...]</p>
+  <p>> <span>SOME PAGES ON THIS SERVER THAT YOU DO HAVE PERMISSION TO ACCESS</span>: [<a href="/">Home Page</a>,
+    <a href="http//www.znsoft.top/">About Us</a>, <a href="http//www.znsoft.top/yz">Contact Us</a>...]
+  </p>
+  <p>> <span>HAVE A NICE DAY---ZnSoft</span></p>
+</div>
+</body>
+
+<script>
+  const content = document.getElementById('content').innerHTML.toString();
+  let index = 0;
+  document.getElementById('content').innerHTML = "";
+
+  setTimeout(function () {
+    const task = setInterval(function () {
+      index++;
+      document.getElementById('content').innerHTML = content.slice(0, index) + "|";
+      if (index === content.length) {
+        clearInterval(task);
+        document.getElementById('content').innerHTML = content;
+      }
+    }, 10);
+  }, 0);
+
+</script>
+
+</html>
